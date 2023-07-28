@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, paper, scisors, lizard and spock</title>
-    <link rel="stylesheet" href="pps.css">
-</head>
-<body>
-    <h1>Rock, paper, scisors, lizard and spock</h1>
-    <p>Choose your weapon:</p>
-    <form action="pps2.php" method="post">
-        <select name="weapon">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scisors">Scisors</option>
-            <option value="lizard">Lizard</option>
-            <option value="spock">Spock</option>
-        </select>
-        <input type="submit" value="Play">
-    </form>
-    <!--add a virtual frame to show the result-->
-    <iframe src="pps2.php" width="100%" height="400"></iframe>
 
+    <title>Rock, paper, scissors, lizard, spock</title>
+    <link rel="stylesheet" href="/Assets/css/pp2.css">
+</head>
+<!--rules and weapons-->
+<body>
+    <h1>Rock, paper, scissors, lizard, spock</h1>
+    <p>Choose your weapon:</p>
+
+    <p>Rules:</p>
+    <ul>
+        <li>Rock crushes Scissors</li>
+        <li>Scissors cuts Paper</li>
+        <li>Paper covers Rock</li>
+        <li>Rock crushes Lizard</li>
+        <li>Lizard poisons Spock</li>
+        <li>Spock smashes Scissors</li>
+        <li>Scissors decapitates Lizard</li>
+        <li>Lizard eats Paper</li>
+        <li>Paper disproves Spock</li>
+        <li>Spock vaporizes Rock</li>
+    </ul>
+    <!--where does this game come from-->
+    <p>Source: <a href="https://www.youtube.com/watch?v=x5Q6-wMx-K8&t=40s">The Big Bang Theory</a></p>
+
+    <!--classes, IDs and buttons (for display)-->
+    <div id="gameDiv">
+        <h1 class="gameText" id="playerText">Player: </h1>
+        <h1 class="gameText" id="computerText">Computer: </h1>
+        <h1 class="gameText" id="resultText">Result: </h1>
+
+        <button class="choiceBtn">ROCK</button>
+        <button class="choiceBtn">PAPER</button>
+        <button class="choiceBtn">SCISSORS</button>
+        <button class="choiceBtn">LIZARD</button>
+        <button class="choiceBtn">SPOCK</button>
+    </div>
+<!--link to JS-->
+    <script src="pp2.js"></script>
 </body>
+
 </html>
