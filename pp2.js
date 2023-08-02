@@ -55,6 +55,7 @@ function displayImage(url, width, height){
 }             
 
 displayImage("https://imgur.com/xXIrJQ8", 200, 200);
+//create function that shows the specific picture when paper, rock, scissors, lizard or spock wins//
 
 function checkWinner(){
     if(player === computer){
@@ -104,17 +105,20 @@ function checkWinner(){
     }
 }
 
-//function liveScore//
+//function liveScore, to show the winner and loser (no workiing yet)//
 
+function liveScore(){
 let playerScore = 0;
 let computerScore = 0;
 for (let i = 0; i < 10; i++){
     if (checkWinner() === "Player Wins!!"){
         playerScore++;
+        console.log("Player wins: " + playerScore);
     }
     else if (checkWinner() === "Computer Wins!!"){
         computerScore++;
+        console.log("Computer wins: " + computerScore);
     }
 }
-console.log("Player wins: " + playerScore);
-console.log("Computer wins: " + computerScore);
+}
+
