@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<!--language-->
 <html lang="en">
 
+<!--keywords and context-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +10,69 @@
     <title>Rock, paper, scissors, lizard, spock</title>
     <link rel="stylesheet" href="/Assets/css/pp2.css">
 </head>
-<!--rules and weapons-->
+
 <body>
-    <h1>Rock, paper, scissors, lizard, spock</h1>
-    <p>Choose your weapon:</p>
+    <!--title and game context-->
 
-    <p>Rules:</p>
-    <ul>
-        <li>Rock crushes Scissors</li>
-        <li>Scissors cuts Paper</li>
-        <li>Paper covers Rock</li>
-        <li>Rock crushes Lizard</li>
-        <li>Lizard poisons Spock</li>
-        <li>Spock smashes Scissors</li>
-        <li>Scissors decapitates Lizard</li>
-        <li>Lizard eats Paper</li>
-        <li>Paper disproves Spock</li>
-        <li>Spock vaporizes Rock</li>
-    </ul>
-    <!--where does this game come from-->
-    <p>Source: <a href="https://www.youtube.com/watch?v=x5Q6-wMx-K8&t=40s">The Big Bang Theory</a></p>
+    <h1 class="title">Rock, paper, scissors, lizard, spock</h1>
+   
+    <div class="rules">
+        <p style="text-transform:uppercase; font-size: 45px"; >Rules:</p>
+        <ol>
+            <li>Rock crushes Scissors</li>
+            <li>Scissors cuts Paper</li>
+            <li>Paper covers Rock</li>
+            <li>Rock crushes Lizard</li>
+            <li>Lizard poisons Spock</li>
+            <li>Spock smashes Scissors</li>
+            <li>Scissors decapitates Lizard</li>
+            <li>Lizard eats Paper</li>
+            <li>Paper disproves Spock</li>
+            <li>Spock vaporizes Rock</li>
+        </ol>
+    </div>
 
-    <!--classes, IDs and buttons (for display)-->
+    <!--Explanation about origins of the game-->
+
+    <div class="bigbangT">
+        <p>The Origins Of The Game: <a href="https://www.youtube.com/watch?v=x5Q6-wMx-K8&t=40s">The Big Bang Theory</a></p>
+    </div>
+
+    <!--game elements. 
+    Buttons with game choices-->
+
     <div id="gameDiv">
+        <h1 class="choose">CHOOSE YOUR WEAPON!!</h1>
+        <div class="BtnAll">
+            <button class="choiceBtn">Rock</button>
+            <button class="choiceBtn">Paper</button>
+            <button class="choiceBtn">Scissors</button>
+            <button class="choiceBtn">Lizard</button>
+            <button class="choiceBtn">Spock</button>
+        </div>
+        <div>
+            <!--function to show graphics on results-->
+
+            <script>
+               function displayImage(src, width, height) {
+                let img = document.createElement("img");
+                img.src = src;
+                img.width = width;
+                img.height = height;
+                document.body.appendChild(img);
+            }
+            </script>
+        </div>
+
+<!--function to show text after choices have been made-->
+
+        <div>
         <h1 class="gameText" id="playerText">Player: </h1>
         <h1 class="gameText" id="computerText">Computer: </h1>
         <h1 class="gameText" id="resultText">Result: </h1>
 
-        <button class="choiceBtn">ROCK</button>
-        <button class="choiceBtn">PAPER</button>
-        <button class="choiceBtn">SCISSORS</button>
-        <button class="choiceBtn">LIZARD</button>
-        <button class="choiceBtn">SPOCK</button>
+        </div>
     </div>
-<!--link to JS-->
     <script src="pp2.js"></script>
 </body>
 

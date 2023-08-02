@@ -1,4 +1,76 @@
+
+/* whole site styling */
 * {
     padding: 0;
     margin: 0;
+    background-color: blue;
+}
+
+/* header and introductory styling */
+
+.title {
+    font-size:120px;
+} 
+
+h1 {
+    font-family: fantasy;
+    color: azure;
+    font-style: oblique;
+    padding: 25px;
+}
+
+.rules {
+    font-family: fantasy;
+    color: azure;
+    font-style: oblique;
+    color: rgb(209, 243, 140);
+    padding:75px;
+}
+
+/* origins video styling */
+
+.bigbangT p {
+    padding:100px;
+    color: rgb(209, 243, 140);
+    font-size: 45px;
+}
+
+.bigbangT a {
+    padding:100px;
+    color: rgb(209, 243, 140);
+    font-size: 45px;
+}
+
+*/ buttons styling */
+
+.choose {
+    padding: 200px 25px 100px 25px;
+    text-align: center;
+    font-size: 55px;
+
+}
+.choiceBtn {
+    font-size: 55px;
+    color: azure;
+    width: 250px;
+}
+
+.BtnAll {
+    padding: 75px;
+}
+
+/* text styling */
+
+.gameText {
+    color: rgb(209, 243, 140);
+    padding:85px;
+}
+
+/* photo result styling */
+
+.photoResult img {
+    padding: 45px;
+    width: 500px;
+    height: 500px;
+
 }

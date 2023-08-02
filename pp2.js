@@ -13,8 +13,8 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
        
       player = button.textContent;
       computerChance();
-      playerText.textContent = `player: ${player}`;
-      computerText.textContent = `computer: ${computer}`;
+      playerText.textContent = `Player: ${player}`;
+      computerText.textContent = `Computer: ${computer}`;
       resultText.textContent = checkWinner();
 }));
 
@@ -44,12 +44,24 @@ function computerChance(){
 
 /*logic of the main game, and different returns for different outcomes*/
 
+/*function to display images (images no showing so far) */
+
+function displayImage(url, width, height){
+    let img = document.createElement("img");
+    img.src = url;
+    img.width = width;
+    img.height = height;
+    document.body.appendChild(img);
+}             
+
+displayImage("https://imgur.com/xXIrJQ8", 200, 200);
 function checkWinner(){
     if(player === computer){
         return "It's A Tie!!";
-        displayImage('Images.png', 400, 300);
+        displayImage("https://imgur.com/IeXoxkz", 200, 200);
     }
     else if(player === "Rock"){
+        displayImage("https://imgur.com/Xf1px6I", 200, 200);
         if(computer === "Scissors" || computer === "Lizard"){
             return "Player Wins!!";
         }
