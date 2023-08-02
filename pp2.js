@@ -55,15 +55,16 @@ function displayImage(url, width, height){
 }             
 
 displayImage("https://imgur.com/xXIrJQ8", 200, 200);
+
 function checkWinner(){
     if(player === computer){
         return "It's A Tie!!";
-        displayImage("https://imgur.com/IeXoxkz", 200, 200);
+     
     }
     else if(player === "Rock"){
-        displayImage("https://imgur.com/Xf1px6I", 200, 200);
         if(computer === "Scissors" || computer === "Lizard"){
             return "Player Wins!!";
+          
         }
         else if(computer === "Paper" || computer === "Spock"){
             return "Computer Wins!!";
@@ -102,3 +103,18 @@ function checkWinner(){
         }
     }
 }
+
+//function liveScore//
+
+let playerScore = 0;
+let computerScore = 0;
+for (let i = 0; i < 10; i++){
+    if (checkWinner() === "Player Wins!!"){
+        playerScore++;
+    }
+    else if (checkWinner() === "Computer Wins!!"){
+        computerScore++;
+    }
+}
+console.log("Player wins: " + playerScore);
+console.log("Computer wins: " + computerScore);
