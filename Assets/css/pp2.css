@@ -44,7 +44,7 @@ h1 {
 /* buttons styling */
 
 .choose {
-    padding: 200px 25px 100px 25px;
+    padding: 100px 25px 100px 25px;
     text-align: center;
     font-size: 55px;
 
@@ -56,14 +56,14 @@ h1 {
 }
 
 .BtnAll {
-    padding: 75px;
+    padding: 37px;
 }
 
 /* text styling */
 
 .gameText {
     color: rgb(209, 243, 140);
-    padding:85px;
+    padding:35px;
 }
 
 /* photo result styling */
@@ -72,5 +72,14 @@ h1 {
     padding: 45px;
     width: 500px;
     height: 500px;
+    position: absolute;
+    justify-content: top;
+    object-fit: cover;
+}
+/* score and attempts */
 
+#scoring{
+    font-size: 45px;
+    color: rgb(116, 149, 51);
+    padding: 35px;
 }

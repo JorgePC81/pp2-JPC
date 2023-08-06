@@ -3,10 +3,15 @@
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
+const score = document.querySelector("#scoring");
+const attempts = document.querySelector("#totalAttempts");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
+
 let player;
 let computer;
 let result;
+let playerScore = 0;
+let computerScore = 0;
 
 /* adding text to the Actions through clicking the button. Also calling function computerChance(), to be developed */
 choiceBtns.forEach(button => button.addEventListener("click", () => {
@@ -16,6 +21,10 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
       playerText.textContent = `Player: ${player}`;
       computerText.textContent = `Computer: ${computer}`;
       resultText.textContent = checkWinner();
+      liveScore();
+      score.textContent = playerScore;
+      score.textContent = computerScore;
+
 }));
 
 /*function to obtain computer's choice*/
@@ -44,62 +53,62 @@ function computerChance(){
 
 /*logic of the main game, and different returns for different outcomes*/
 
-/*function to display images (images no showing so far) */
-
-function displayImage(url, width, height){
-    let img = document.createElement("img");
-    img.src = url;
-    img.width = width;
-    img.height = height;
-    document.body.appendChild(img);
-}             
-
-displayImage("https://imgur.com/xXIrJQ8", 200, 200);
 //create function that shows the specific picture when paper, rock, scissors, lizard or spock wins//
 
+
 function checkWinner(){
-    if(player === computer){
+
+    if(player == computer){
+        displayImage("/assets/images/tie.jpeg", 200, 200);
         return "It's A Tie!!";
-     
     }
-    else if(player === "Rock"){
-        if(computer === "Scissors" || computer === "Lizard"){
+    else if(player == "Rock"){
+        if(computer == "Scissors" || computer == "Lizard"){
+            displayImage("/assets/images/rock.jpeg", 200, 200);
             return "Player Wins!!";
-          
         }
-        else if(computer === "Paper" || computer === "Spock"){
+        else if(computer == "Paper" || computer == "Spock"){
+            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
-    else if(player === "Paper"){
-        if(computer === "Rock" || computer === "Spock"){
+    else if(player == "Paper"){
+        if(computer == "Rock" || computer == "Spock"){
+            displayImage("/assets/images/paper.jpeg", 200, 200);
             return "Player Wins!!";
         }
-        else if(computer === "Scissors" || computer === "Lizard"){
+        else if(computer == "Scissors" || computer == "Lizard"){
+            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
-    else if(player === "Scissors"){
-        if(computer === "Paper" || computer === "Lizard"){
+    else if(player == "Scissors"){
+        if(computer == "Paper" || computer == "Lizard"){
+            displayImage("/assets/images/scissors.jpeg", 200, 200);
             return "Player Wins!!";
         }
-        else if(computer === "Rock" || computer === "Spock"){
+        else if(computer == "Rock" || computer == "Spock"){
+            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
-    else if(player === "Lizard"){
-        if(computer === "Paper" || computer === "Spock"){
+    else if(player == "Lizard"){
+        if(computer == "Paper" || computer == "Spock"){
+            displayImage("/assets/images/lizard.jpeg", 200, 200);
             return "Player Wins!!";
         }
-        else if(computer === "Rock" || computer === "Scissors"){
+        else if(computer == "Rock" || computer == "Scissors"){
+            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
-    else if(player === "Spock"){
-        if(computer === "Scissors" || computer === "Rock"){
+    else if(player == "Spock"){
+        if(computer == "Scissors" || computer == "Rock"){
+            displayImage("/assets/images/spock.jpeg", 200, 200);
             return "Player Wins!!";
         }
-        else if(computer === "Paper" || computer === "Lizard"){
+        else if(computer == "Paper" || computer == "Lizard"){
+            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
@@ -108,17 +117,13 @@ function checkWinner(){
 //function liveScore, to show the winner and loser (no workiing yet)//
 
 function liveScore(){
-let playerScore = 0;
-let computerScore = 0;
-for (let i = 0; i < 10; i++){
-    if (checkWinner() === "Player Wins!!"){
-        playerScore++;
-        console.log("Player wins: " + playerScore);
-    }
-    else if (checkWinner() === "Computer Wins!!"){
-        computerScore++;
-        console.log("Computer wins: " + computerScore);
-    }
-}
-}
 
+    
+        if (checkWinner() === "Player Wins!!"){
+            playerScore++;
+        }
+        else if (checkWinner() === "Computer Wins!!"){
+            computerScore++;
+        }
+    
+}
