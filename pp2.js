@@ -59,55 +59,66 @@ function computerChance(){
 function checkWinner(){
 
     if(player == computer){
+        removeEventListener();
         displayImage("/assets/images/tie.jpeg", 200, 200);
         return "It's A Tie!!";
     }
     else if(player == "Rock"){
         if(computer == "Scissors" || computer == "Lizard"){
+            removeEventListener("click", computerChance);
             displayImage("/assets/images/rock.jpeg", 200, 200);
             return "Player Wins!!";
         }
         else if(computer == "Paper" || computer == "Spock"){
+            removeEventListener("click", computerChance);
             displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
     else if(player == "Paper"){
         if(computer == "Rock" || computer == "Spock"){
+            removeEventListener("click", computerChance);
             displayImage("/assets/images/paper.jpeg", 200, 200);
             return "Player Wins!!";
         }
         else if(computer == "Scissors" || computer == "Lizard"){
+            removeEventListener("click", computerChance);
             displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
     else if(player == "Scissors"){
         if(computer == "Paper" || computer == "Lizard"){
+            removeEventListener("click", computerChance);
             displayImage("/assets/images/scissors.jpeg", 200, 200);
             return "Player Wins!!";
         }
         else if(computer == "Rock" || computer == "Spock"){
+            removeEventListener("click", computerChance);
             displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
     else if(player == "Lizard"){
         if(computer == "Paper" || computer == "Spock"){
+            removeEventListener("click", computerChance);
             displayImage("/assets/images/lizard.jpeg", 200, 200);
             return "Player Wins!!";
         }
         else if(computer == "Rock" || computer == "Scissors"){
+            removeEventListener("click", computerChance);
             displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
     }
     else if(player == "Spock"){
         if(computer == "Scissors" || computer == "Rock"){
+            removeEventListener("click", computerChance);
             displayImage("/assets/images/spock.jpeg", 200, 200);
             return "Player Wins!!";
         }
         else if(computer == "Paper" || computer == "Lizard"){
+            removeEventListener("click", computerChance);
             displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
             return "Computer Wins!!";
         }
