@@ -54,13 +54,15 @@
         <div class="photoResult">
             <script>
                 function displayImage(url, width, height){
+                    console.log('display image', url);
+
                     let img = document.createElement("img");
                     img.src = url;
                     img.width = width;
                     img.height = height;
                     document.body.appendChild(img);
                 }
-            </script> 
+            </script>
         </div>
 
         <!--function to show score-->
