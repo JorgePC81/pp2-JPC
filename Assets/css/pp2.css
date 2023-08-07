@@ -66,9 +66,21 @@ h1 {
     padding:35px;
 }
 
+#stats {
+    display: block;
+    width: 50%;
+    float: left;
+}
+
 /* photo result styling */
 
-.photoResult img {
+#photoResult {
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+#photoResult img {
     padding: 45px;
     width: 500px;
     height: 500px;

@@ -51,34 +51,25 @@
             <button class="choiceBtn">Spock</button>
         </div>
             <!--function to show graphics on results-->
-        <div class="photoResult">
-            <script>
-                function displayImage(url, width, height){
-                    console.log('display image', url);
-
-                    let img = document.createElement("img");
-                    img.src = url;
-                    img.width = width;
-                    img.height = height;
-                    document.body.appendChild(img);
-                }
-            </script>
-        </div>
-
         <!--function to show score-->
 
-        <h1>Wins: </h1>
-        <div id="scoring"></div>
+        <div id="stats">
+            <h1>Wins: </h1>
+            <div id="scoring"></div>
 
-<!--function to show text after choices have been made-->
+    <!--function to show text after choices have been made-->
 
-        <div>
-        <h1 class="gameText" id="playerText">Player: </h1>
-        <h1 class="gameText" id="computerText">Computer: </h1>
-        <h1 class="gameText" id="resultText">Result: </h1>
-
+            <div>
+                <h1 class="gameText" id="playerText">Player: </h1>
+                <h1 class="gameText" id="computerText">Computer: </h1>
+                <h1 class="gameText" id="resultText">Result: </h1>
+            </div>
         </div>
+        
+
+        <div id="photoResult"></div>
     </div>
+    
     <script src="pp2.js"></script>
 </body>
 

@@ -6,6 +6,7 @@ const resultText = document.querySelector("#resultText");
 const score = document.querySelector("#scoring");
 const attempts = document.querySelector("#totalAttempts");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
+const photoResult = document.querySelector("#photoResult");
 
 let player;
 let computer;
@@ -59,66 +60,66 @@ function computerChance(){
 function checkWinner(){
 
     if(player == computer){
-        displayImage("/assets/images/tie.jpeg", 200, 200);
+        displayImage('tie');
         return "It's A Tie!!";
     }
     else if(player == "Rock"){
         if(computer == "Scissors" || computer == "Lizard"){
            
-            displayImage("/assets/images/rock.jpeg", 200, 200);
+            displayImage('rock');
             return "Player Wins!!";
         }
         else if(computer == "Paper" || computer == "Spock"){
            
-            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
+            displayImage(computer);
             return "Computer Wins!!";
         }
     }
     else if(player == "Paper"){
         if(computer == "Rock" || computer == "Spock"){
           
-            displayImage("/assets/images/paper.jpeg", 200, 200);
+            displayImage('paper');
             return "Player Wins!!";
         }
         else if(computer == "Scissors" || computer == "Lizard"){
            
-            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
+            displayImage(computer);
             return "Computer Wins!!";
         }
     }
     else if(player == "Scissors"){
         if(computer == "Paper" || computer == "Lizard"){
          
-            displayImage("/assets/images/scissors.jpeg", 200, 200);
+            displayImage('scissors');
             return "Player Wins!!";
         }
         else if(computer == "Rock" || computer == "Spock"){
            
-            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
+            displayImage(computer);
             return "Computer Wins!!";
         }
     }
     else if(player == "Lizard"){
         if(computer == "Paper" || computer == "Spock"){
             
-            displayImage("/assets/images/lizard.jpeg", 200, 200);
+            displayImage('lizard');
             return "Player Wins!!";
         }
         else if(computer == "Rock" || computer == "Scissors"){
             
-            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
+            displayImage(computer);
             return "Computer Wins!!";
         }
     }
     else if(player == "Spock"){
         if(computer == "Scissors" || computer == "Rock"){
             
-            displayImage("/assets/images/spock.jpeg", 200, 200);
+            displayImage('spock');
             return "Player Wins!!";
         }
         else if(computer == "Paper" || computer == "Lizard"){
             
-            displayImage(`/assets/images/${computer.toLowerCase()}.jpeg`, 200, 200);
+            displayImage(computer);
             return "Computer Wins!!";
         }
     }
@@ -134,4 +135,13 @@ function liveScore(winner){
             computerScore++;
         }
     
+}
+
+function displayImage(image) {
+    const img = document.createElement("img");
+    img.src = `/assets/images/${image.toLowerCase()}.jpeg`;
+    img.width = 200;
+    img.height = 200;
+    
+    photoResult?.replaceChildren(img);
 }
