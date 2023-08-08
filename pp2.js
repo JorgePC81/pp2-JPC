@@ -14,7 +14,7 @@ let result;
 let playerScore = 0;
 let computerScore = 0;
 
-/* adding text to the Actions through clicking the button. Also calling function computerChance(), to be developed */
+/* adding text to the Actions through clicking the button. Also calling function computerChance() or liveScore(). In addition, I developed the score.textContent function */
 choiceBtns.forEach(button => button.addEventListener("click", () => {
        
       player = button.textContent;
@@ -28,7 +28,7 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
 
 }));
 
-/*function to obtain computer's choice*/
+/*function to obtain computer's weapon choice*/
 
 function computerChance(){
     const randNum = Math.floor(Math.random() * 5) + 1;
@@ -53,8 +53,6 @@ function computerChance(){
 }
 
 /*logic of the main game, and different returns for different outcomes*/
-
-//create function that shows the specific picture when paper, rock, scissors, lizard or spock wins//
 
 
 function checkWinner(){
@@ -136,6 +134,8 @@ function liveScore(winner){
         }
     
 }
+
+//create function that shows the specific picture when paper, rock, scissors, lizard or spock wins//
 
 function displayImage(image) {
     const img = document.createElement("img");
