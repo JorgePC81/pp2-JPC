@@ -4,13 +4,11 @@ const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
 const score = document.querySelector("#scoring");
-const attempts = document.querySelector("#totalAttempts");
 const choiceBtns = document.querySelectorAll(".choiceBtn");
 const photoResult = document.querySelector("#photoResult");
 
 let player;
 let computer;
-let result;
 let playerScore = 0;
 let computerScore = 0;
 
