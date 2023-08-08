@@ -139,7 +139,7 @@ function liveScore(winner){
 
 function displayImage(image) {
     const img = document.createElement("img");
-    img.src = `/assets/images/${image.toLowerCase()}.jpeg`;
+    img.src = `assets/images/${image.toLowerCase()}.jpeg`;
     img.width = 200;
     img.height = 200;
     
