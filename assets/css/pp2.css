@@ -85,7 +85,6 @@ h1 {
     width: 500px;
     height: 500px;
     position: absolute;
-    justify-content: top;
     object-fit: fill;
 }
 /* showing score  */
@@ -274,3 +273,4 @@ h1 {
     #stats > h1{
         font-size: 20px;
     }
+}
